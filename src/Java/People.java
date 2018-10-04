@@ -4,42 +4,53 @@ import java.util.ArrayList;
 
 public class People {
 
-    ArrayList<String> personList = new ArrayList();
+    private Person person;
 
-    public Person add(String name) {
-        personList.add(name);
-    }
+    ArrayList<Person> personList = new ArrayList();
 
-    public Person findbyID(long id) {
-        return Person;
-
+    public void add(Person p) {
+        personList.add(p);
     }
 
 
-    public Person remove(Person person){
-        remove(Person person)
+    public void findbyID(long id) {
+        for (Person p : personList) {
+            if (p.getid() == id)
+                System.out.println(p);
+
+        }
+
+    }
+
+
+    public void remove(Person person){
+        personList.remove(person);
     }
 
 
 
 
-    public Person remove(Person person) {
-        remove(Person - person);
+    public void remove(long id) {
+        for (Person p: personList)
+            {if(id == p.getid())
+                personList.remove(p);
+
+        }
     }
 
     public int getCount(){
         return personList.size();
     }
 
-    public ArrayList<String> getArray(){
-        return personList;
+//    public int getArray(){
+//        return personList.size();
+//    }
+
+    public void  removeAll(){
+        personList.removeAll(personList);
     }
 
-    public ArrayList<String> removeAll(){
-        return removeAll();
-    }
 
-sr
 
 }
 
